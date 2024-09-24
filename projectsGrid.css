@@ -8,7 +8,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('images/background.jpg'); 
+    background-image: url('../images/background.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -133,6 +133,15 @@ body, html {
 }
 
 #image2:target .popup-image .popup-text .close {
+    transform: scale(1); 
+}
+
+#image3:target {
+    opacity: 1; 
+    visibility: visible;
+}
+
+#image3:target .popup-image .popup-text .close {
     transform: scale(1); 
 }
 
