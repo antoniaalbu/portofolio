@@ -3,66 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonia's Projects</title>
-    <link rel="stylesheet" href="projectsGrid.css"> 
+    <title>Simple Page with Background Video</title>
+    <link rel="stylesheet" href="mainStyles.css">
+    <link rel="stylesheet" href="navStyles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
 <body>
-    <div class="centered-text">Antonia's Projects</div>
-    <div class="folder-container">
-        <div class="folder">
-            <a href="#image1">
-                <img src="images/folder.png" alt="SENSOR INC. Coming Soon Page">
-                <p>Coming Soon </p>
-            </a>
-        </div>
-        <div class="folder">
-            <img src="images/folder.png" alt="Project 2">
-            <p>Project</p>
-        </div>
-        <div class="folder">
-            <a href="#image2">
-                <img src="images/folder.png" alt="Project 3">
-                <p>SENSOR INC.</p>
-            </a>
-        </div>
-        <div class="folder">
-            <img src="images/folder.png" alt="Project 4">
-            <p>Project</p>
-        </div>
-        <div class="folder">
-            <img src="images/folder.png" alt="Project 5">
-            <p>Project</p>
-        </div>
-        <div class="folder">
-            <img src="images/folder.png" alt="Project 6">
-            <p>Project</p>
-        </div>
-        <div class="folder">
-            <img src="images/folder.png" alt="Project 7">
-            <p>Project</p>
-        </div>
-    </div>
-    <div class="overlay" id="image1">
-        <div class="popup-content" >
-            <img src="images/window.jpg" alt="Image 1" class="popup-image">
-            <div class="popup-text">
-                SENSOR INC. Coming Soon Page
-                <br>
-                <a href="https://antoniaalbu.github.io/comingSoon" class="popup-link" target="_blank">Learn More</a>
+    <!-- Background Container -->
+    <div class="background-container">
+        <!-- Video Background -->
+        <video autoplay muted id="bg-video">
+            <source src="images/video2.mp4" type="video/mp4">
+            <source src="images/video2.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <!-- Content overlay -->
+        <div class="content">
+            <div class="typewriter">
+                <h1>Welcome</h1>
             </div>
-            <a href="#" class="close">x</a>
-        </div>
-    </div>
-    <div class="overlay" id="image2">
-        <div class="popup-content" >
-            <img src="images/window.jpg" alt="Image 2" class="popup-image">
-            <div class="popup-text">
-                SENSOR INC. 
-                <br>
-                <a href="https://antoniaalbu.github.io/home.html" class="popup-link" target="_blank">Learn More</a>
+            <p>To my page</p>
+            <!-- Buttons Container -->
+            <div class="button-container">
+                <button class="btn" id="btn1" onclick="location.href='about.html'">About Me</button>
+                <button class="btn" id="btn2" onclick="location.href='projects.html'">Projects</button>
+                <button class="btn" id="btn3" onclick="location.href='experience.html'">Experience</button>
             </div>
-            <a href="#" class="close">x</a>
         </div>
     </div>
+
+    <!-- Sections placed below the background container -->
+    <div id="about" class="section hidden">
+        <h2>About Me</h2>
+        <p>Your content here...</p>
+    </div>
+    <div id="experience" class="section hidden">
+        <h2>Experience</h2>
+        <p>Your content here...</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">Experience</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="showNavbar.js"></script> 
 </body>
+
+
 </html>

@@ -8,13 +8,36 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('../images/background.jpg'); 
+    font-family: Arial, sans-serif;
+    background-color: black;
+    animation: zoomIn 0.8s forwards; 
+}
+
+.background-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/back.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    font-family: Arial, sans-serif;
+    z-index: 0; 
 }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5); 
+        opacity: 0; 
+    }
+    to {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
 
 .centered-text {
     position: absolute;
@@ -107,49 +130,39 @@ body, html {
     transition: transform 0.5s ease;
 }
 
-.popup-text a{
-    color: white;
+.popup-link {
+    position: absolute;
+    top: 65%; 
+    left: 57%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(237, 81, 188);
+    font-size: 24px;
+    padding: 20px;
+    max-width: 20%; 
+    text-align: center; 
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
 }
+
+.popup-link:hover {
+    color: rgb(0, 191, 255) ; 
+}
+
 
 .popup-image {
-    width: 50%; 
+    width: 70%; 
     height: auto;
-    transform: scale(0.8);
+    transform: scale(0.8); 
     transition: transform 0.5s ease; 
+    display: block; 
+    margin: 0 auto; 
 }
-
-#image1:target {
-    opacity: 1; 
-    visibility: visible;
-}
-
-#image1:target .popup-image .popup-text .close {
-    transform: scale(1); 
-}
-
-#image2:target {
-    opacity: 1; 
-    visibility: visible;
-}
-
-#image2:target .popup-image .popup-text .close {
-    transform: scale(1); 
-}
-
-#image3:target {
-    opacity: 1; 
-    visibility: visible;
-}
-
-#image3:target .popup-image .popup-text .close {
-    transform: scale(1); 
-}
-
 
 .close {
     position: absolute;
     top: 12%;
-    left: 31%;
+    left: 23.5%;
     color: white;
     font-size: 24px;
     text-decoration: none;
@@ -159,8 +172,8 @@ body, html {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    width: 30px; 
-    height: 30px; 
+    width: 40px; 
+    height: 40px; 
     text-align: center; 
     transition: transform 0.5s ease;
 }

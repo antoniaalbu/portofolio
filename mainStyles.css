@@ -1,0 +1,123 @@
+/* Reset default browser margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+    font-family: "Montserrat", sans-serif; /* Set default font */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Background video styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Puts the video behind the content */
+    object-fit: cover; /* Ensures the video covers the entire screen */
+}
+
+/* Content overlay styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Takes full view height */
+    text-align: center;
+    color: white; /* White text for contrast against the video */
+    padding: 20px;
+}
+
+/* Typewriter effect styling */
+.typewriter h1 {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid white; 
+    animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(83, 166, 255); }
+}
+
+p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add some space between the content and the buttons */
+}
+
+.btn {
+    background-color: #ffffff; /* White button background */
+    color: #000000; /* Black text color */
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px; /* Space between the buttons */
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Section styles */
+/* Section styles */
+.section {
+    display: none; /* Initially hide sections */
+    padding: 20px;
+    min-height: calc(100vh - 100px); /* Ensure sections fill the space below the video */
+    position: relative; /* Keep this for normal flow */
+    margin-top: 0; /* No margin to ensure it sits directly below */
+    color: #ffffff; /* Set text color to white for visibility */
+}
+
+/* Background image styles for each section */
+#about {
+    background-image: url('images/black.jpg'); /* Change the path */
+    background-size: cover;
+    background-position: center;
+}
+
+#experience {
+    background-image: url('path/to/your/experience-image.jpg'); /* Change the path */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Additional styles to ensure visibility of sections */
+.hidden {
+    display: none; /* Keep sections hidden by default */
+}
+
+.visible {
+    display: block; /* Show sections when visible class is added */
+}
+
+/* Ensuring the body has no overflow causing layout issues */
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
