@@ -121,3 +121,12 @@ body {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+@media (max-width: 768px) {
+    .typewriter h1{
+        font-size: 50px;
+    }
+
+    .btn{
+        padding: 10px 15px;
+    }
+}

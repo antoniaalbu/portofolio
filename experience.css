@@ -96,8 +96,17 @@ p {
         font-size: 16px; /* Smaller text on small screens */
     }
 
+    .slides {
+        display: flex; 
+        animation: scroll 7s linear infinite; 
+    }
+
     .language-image {
         width: 100px; /* Smaller images */
         height: 100px; /* Maintain aspect ratio */
+    }
+
+    .language-slider{
+        width: 60%;
     }
 }
