@@ -145,7 +145,22 @@ body, html {
     text-decoration: none;
 }
 
-.popup-link:hover {
+.popup-link2 {
+    position: absolute;
+    top: 70%; 
+    left: 57%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(237, 81, 188);
+    font-size: 24px;
+    padding: 20px;
+    max-width: 20%; 
+    text-align: center; 
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popup-link:hover, .popup-link2:hover {
     color: rgb(0, 191, 255) ; 
 }
 

@@ -32,6 +32,7 @@ function showPopup(project) {
 
     const imageElement = document.getElementById(`popupImage${project.id.charAt(project.id.length - 1)}`);
     const linkElement = document.getElementById(`popupLink${project.id.charAt(project.id.length - 1)}`);
+    const linkGitElement = document.getElementById(`popupLinkGit${project.id.charAt(project.id.length - 1)}`);
     const textElement = document.getElementById(`popupText${project.id.charAt(project.id.length - 1)}`);
 
     console.log("Project data:", project);
@@ -40,10 +41,12 @@ function showPopup(project) {
     console.log("Link Element:", linkElement);
     console.log("Text Element:", textElement);
     
-    if (imageElement && linkElement && textElement) {
+    if (imageElement && linkElement && linkGitElement && textElement) {
         imageElement.src = project.image;
         linkElement.href = project.link; 
-        linkElement.textContent = "Learn More";
+        linkGitElement.href = project.linkGit;
+        linkElement.textContent = "View Website";
+        linkGitElement.textContent = "Link Git"
         textElement.innerHTML = project.description;
 
         overlay.style.opacity = '1'; 
