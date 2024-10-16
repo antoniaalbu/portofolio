@@ -198,4 +198,144 @@ body, html {
 }
 
 
+@media screen and (max-width: 768px) {
+    .popup-image {
+        content: url('images/mobile_window.jpg'); 
+        width: 90%; 
+    }
+
+    .popup-text {
+        position: absolute;
+        top: 45%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        max-width: 60%;  
+        transition: transform 0.5s ease;
+    }
+    
+    .popup-link {
+        position: absolute;
+        top: 60%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: rgb(237, 81, 188);
+        font-size: 18px;
+        padding: 20px;
+        max-width: 40%; 
+        text-align: center; 
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .popup-link2 {
+        position: absolute;
+        top: 65%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: rgb(237, 81, 188);
+        font-size: 18px;
+        padding: 20px;
+        max-width: 40%; 
+        text-align: center; 
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .close {
+        position: absolute;
+        top: 11%;
+        left: 16%;
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        background: rgb(237, 81, 188); 
+        padding: 10px; 
+        border-radius: 50%; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 23px; 
+        height: 23px; 
+        text-align: center; 
+        transition: transform 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .popup-image {
+        content: url('images/mobile_window.jpg'); 
+        width: 90%; 
+        height: auto;
+        transform: scale(0.8); 
+        transition: transform 0.5s ease; 
+        display: block;   
+    }
+
+    .popup-text {
+        position: absolute;
+        top: 45%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        max-width: 60%;  
+        transition: transform 0.5s ease;
+    }
+    
+    .popup-link {
+        position: absolute;
+        top: 60%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: rgb(237, 81, 188);
+        font-size: 18px;
+        padding: 20px;
+        max-width: 40%; 
+        text-align: center; 
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .popup-link2 {
+        position: absolute;
+        top: 65%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: rgb(237, 81, 188);
+        font-size: 18px;
+        padding: 20px;
+        max-width: 40%; 
+        text-align: center; 
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .close {
+        position: absolute;
+        top: 10.5%;
+        left: 16%;
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        background: rgb(237, 81, 188); 
+        padding: 10px; 
+        border-radius: 50%; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 23px; 
+        height: 23px; 
+        text-align: center; 
+        transition: transform 0.5s ease;
+    }
+}
+
 

@@ -35,18 +35,12 @@ function showPopup(project) {
     const linkGitElement = document.getElementById(`popupLinkGit${project.id.charAt(project.id.length - 1)}`);
     const textElement = document.getElementById(`popupText${project.id.charAt(project.id.length - 1)}`);
 
-    console.log("Project data:", project);
-    console.log("Overlay ID:", project.id);
-    console.log("Image Element:", imageElement);
-    console.log("Link Element:", linkElement);
-    console.log("Text Element:", textElement);
-    
     if (imageElement && linkElement && linkGitElement && textElement) {
-        imageElement.src = project.image;
+        setPopupImage(project, imageElement); // Call to set correct image based on screen size
         linkElement.href = project.link; 
         linkGitElement.href = project.linkGit;
         linkElement.textContent = "View Website";
-        linkGitElement.textContent = "Link Git"
+        linkGitElement.textContent = "Link Git";
         textElement.innerHTML = project.description;
 
         overlay.style.opacity = '1'; 
@@ -56,6 +50,23 @@ function showPopup(project) {
     }
 }
 
+// Dynamically change the popup image based on screen size
+function setPopupImage(project, imageElement) {
+    if (window.innerWidth < 768) {
+        imageElement.src = project.imageSmall; // Load smaller image for mobile
+    } else {
+        imageElement.src = project.image; // Load normal image for larger screens
+    }
+
+    // Update the image when window resizes
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            imageElement.src = project.imageSmall;
+        } else {
+            imageElement.src = project.image;
+        }
+    });
+}
 
 document.querySelectorAll('.close').forEach(closeButton => {
     closeButton.addEventListener('click', (event) => {

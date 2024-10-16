@@ -10,5 +10,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const navbar = document.querySelector('.navbar');
     setTimeout(() => {
         navbar.classList.add('show'); // Show the navbar with a sliding effect
-    }, 300); // Delay the appearance by 300ms for effect
+    }, 300); 
 });
