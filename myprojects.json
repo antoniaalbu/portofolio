@@ -3,6 +3,7 @@
         "id": "image1",
         "title": "Coming Soon",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "link": "https://antoniaalbu.github.io/comingSoon",
         "linkGit" : "https://github.com/antoniaalbu/comingsoon",
         "description": "SENSOR INC. Coming Soon Page using HTML and CSS"
@@ -11,6 +12,7 @@
         "id": "image2",
         "title": "SENSOR INC.",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/antoniaalbu.github.io",
         "link": "https://antoniaalbu.github.io/home.html",
         "description": "SENSOR INC. Page using HTML and CSS"
@@ -19,6 +21,7 @@
         "id": "image3",
         "title": "Grid Vs. Flex ",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/sitelayout",
         "link": "https://antoniaalbu.github.io/sitelayout/",
         "description": "Grid Vs. Flex Layout using HTML and CSS"
@@ -27,6 +30,7 @@
         "id": "image4",
         "title": "Tip Calculator",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/tip-calculator",
         "link": "https://antoniaalbu.github.io/tip-calculator",
         "description": "Tip Calculator using JavaScript"
@@ -35,6 +39,7 @@
         "id": "image5",
         "title": "Responsive Navbar",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/navbar",
         "link": "https://antoniaalbu.github.io/navbar",
         "description": "Responsive multi-level Navbar using JavaScript, HTML and CSS"
@@ -43,6 +48,7 @@
         "id": "image6",
         "title": "Currency Converter",
         "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/currency-convertor",
         "link": "https://antoniaalbu.github.io/currency-convertor/",
         "description": "Currency Converter using JavaScript"
