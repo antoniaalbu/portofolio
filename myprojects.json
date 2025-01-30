@@ -52,5 +52,25 @@
         "linkGit" : "https://github.com/antoniaalbu/currency-convertor",
         "link": "https://antoniaalbu.github.io/currency-convertor/",
         "description": "Currency Converter using JavaScript"
+    },
+
+    {
+        "id": "image7",
+        "title": "Magic Mirror",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/francescomaxim/PersonalDashboard",
+        "link": "https://francescomaxim.github.io/PersonalDashboard/LogIn/login.html",
+        "description": "Dashboard application in Javascript"
+    },
+
+    {
+        "id": "image8",
+        "title": "Recipe finder",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/recipe-finder-angular",
+        "link": "https://recipe-finder-angular.vercel.app/",
+        "description": "Application that helps you find recipes by introducing ingredients that you have in your house."
     }
 ]

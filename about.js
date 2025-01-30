@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Add the class to trigger the slide-in effect after the page loads
     const content = document.querySelector('.content-container');
     setTimeout(() => {
         content.classList.add('slide-in-active');
-    }, 100); // Add a slight delay before the slide-in
+    }, 100); 
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
     const navbar = document.querySelector('.navbar');
     setTimeout(() => {
-        navbar.classList.add('show'); // Show the navbar with a sliding effect
+        navbar.classList.add('show');
     }, 300); 
 });

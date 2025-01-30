@@ -50,7 +50,6 @@ function showPopup(project) {
     }
 }
 
-// Dynamically change the popup image based on screen size
 function setPopupImage(project, imageElement) {
     if (window.innerWidth < 768) {
         imageElement.src = project.imageSmall; // Load smaller image for mobile
@@ -58,7 +57,7 @@ function setPopupImage(project, imageElement) {
         imageElement.src = project.image; // Load normal image for larger screens
     }
 
-    // Update the image when window resizes
+
     window.addEventListener('resize', () => {
         if (window.innerWidth < 768) {
             imageElement.src = project.imageSmall;

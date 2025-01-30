@@ -117,6 +117,8 @@ body, html {
     position: relative; 
 }
 
+
+
 .popup-text {
     position: absolute;
     top: 52%; 
@@ -173,6 +175,20 @@ body, html {
     display: block; 
     margin: 0 auto; 
 }
+
+.popup-bg-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Behind the other content */
+    opacity: 0.5; /* Optional: transparency for better visibility of text */
+}
+
+
 
 .close {
     position: absolute;
