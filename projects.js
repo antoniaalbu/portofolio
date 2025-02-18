@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
                     showPopup(project);
+                    console.log("Folder clicked")
                 });
             });
         })
@@ -36,7 +37,7 @@ function showPopup(project) {
     const textElement = document.getElementById(`popupText${project.id.charAt(project.id.length - 1)}`);
 
     if (imageElement && linkElement && linkGitElement && textElement) {
-        setPopupImage(project, imageElement); // Call to set correct image based on screen size
+        setPopupImage(project, imageElement); 
         linkElement.href = project.link; 
         linkGitElement.href = project.linkGit;
         linkElement.textContent = "View Website";
@@ -52,9 +53,9 @@ function showPopup(project) {
 
 function setPopupImage(project, imageElement) {
     if (window.innerWidth < 768) {
-        imageElement.src = project.imageSmall; // Load smaller image for mobile
+        imageElement.src = project.imageSmall;
     } else {
-        imageElement.src = project.image; // Load normal image for larger screens
+        imageElement.src = project.image;
     }
 
 

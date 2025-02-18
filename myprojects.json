@@ -66,11 +66,29 @@
 
     {
         "id": "image8",
-        "title": "Recipe finder",
+        "title": "Recipe Finder",
         "image": "images/window.jpg",
         "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/recipe-finder-angular",
         "link": "https://recipe-finder-angular.vercel.app/",
-        "description": "Application that helps you find recipes by introducing ingredients that you have in your house."
+        "description": "Angular Application that helps you find recipes."
+    },
+    {
+        "id": "image9",
+        "title": "Snowfall Animation",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/snowfall",
+        "link": "https://snowfall-deployed-git-main-antoniaalbus-projects.vercel.app/",
+        "description": "Snowflake screen saver using Angular."
+    },
+    {
+        "id": "image10",
+        "title": "Angular Template",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/angular-app",
+        "link": "https://final-angular-app.vercel.app/home",
+        "description": "Template for an Angular Application."
     }
 ]

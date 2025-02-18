@@ -53,13 +53,15 @@ body, html {
 
 .folder-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
     gap: 50px; 
     padding: 20px;
     position: absolute;
     top: 5%; 
     z-index: 1; 
 }
+
+
 
 .folder {
     display: grid;
