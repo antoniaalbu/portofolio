@@ -132,9 +132,9 @@ html, body {
 
 @media (max-width: 768px) {
     .content-container {
-        flex-direction: column; /* Change to column layout */
-        align-items: center; /* Center items */
-        width: 80%; /* Take up full width */
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; /* Take up full width */
         padding: 20px; /* Adjust padding */
     }
 
@@ -147,8 +147,8 @@ html, body {
 
     .round-image {
       margin-top: 100px;
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
   }

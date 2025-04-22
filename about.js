@@ -11,3 +11,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         navbar.classList.add('show');
     }, 300); 
 });
+
+// JavaScript to toggle the display of the image and content
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('open'); // Toggle the open class to show content and hide the image
+    });
+});

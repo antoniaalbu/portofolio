@@ -26,7 +26,11 @@ document.querySelectorAll('.small-box').forEach(box => {
     });
 });
 
-
-
-
-
+window.addEventListener('load', function() {
+    if (window.innerWidth <= 900) {
+        const section = document.getElementById('skills-experience');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});

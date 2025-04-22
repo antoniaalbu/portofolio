@@ -5,8 +5,10 @@
 }
 
 html, body {
-    height: 100%;
+   
     font-family: Arial, sans-serif;
+    margin: 0; /* Ensure there's no margin around the body */
+    padding: 0; /* Ensure there's no padding around the body */
 }
 
 
@@ -273,34 +275,69 @@ p {
 
 
 @media (max-width: 900px) {
+    html, body {
+        padding-top: 0;  /* Ensure no padding at the top of the page */
+        margin-top: 0;   /* Ensure no margin at the top of the page */
+    }
+
     .content-container {
-        width: 100%; /* Full width on smaller screens */
-        padding: 20px; /* Reduced padding */
+        width: 100%;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 28px; /* Smaller title on small screens */
+        font-size: 28px;
     }
 
     p {
-        font-size: 16px; /* Smaller text on small screens */
+        font-size: 16px;
     }
 
     .slides {
-        display: flex; 
-        animation: scroll 7s linear infinite; 
+        display: flex;
+        animation: scroll 7s linear infinite;
     }
 
     .language-image {
-        width: 100px; /* Smaller images */
-        height: 100px; /* Maintain aspect ratio */
+        width: 100px;
+        height: 100px;
     }
 
-    .language-slider{
-        width: 60%;
+    .language-slider {
+        width: 80%;
     }
 
     .small-box {
         flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    .row-containers {
+        justify-content: center; /* Center the small boxes */
+    }
+
+    .main-section {
+        padding: 20px 10px;
+        width: 95%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 10px;
+    }
+
+    .large-container h2 {
+        font-size: 22px;
+    }
+
+    .large-container p {
+        font-size: 14px;
+    }
+
+    .download-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .tooltip-container {
+        display: none;
     }
 }
