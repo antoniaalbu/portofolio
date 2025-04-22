@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
         content.classList.add('slide-in-active');
     }, 100); 
 });
+document.querySelectorAll('.small-box').forEach(box => {
+    box.addEventListener('click', () => {
+        box.classList.toggle('expanded');
+    });
+});
+
+
 
 
 

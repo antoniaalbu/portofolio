@@ -83,12 +83,48 @@
         "description": "Snowflake screen saver using Angular."
     },
     {
-        "id": "image10",
+        "id": "image11",
+        "title": "Expense Tracker",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/andricolae/expense-tracker",
+        "link": "https://expense-tracker-ntt.vercel.app/",
+        "description": "Angular App that lets you track your expenses."
+    },
+    {
+        "id": "image12",
         "title": "Angular Template",
         "image": "images/window.jpg",
         "imageSmall": "images/mobile_window.jpg",
         "linkGit" : "https://github.com/antoniaalbu/angular-app",
         "link": "https://final-angular-app.vercel.app/home",
         "description": "Template for an Angular Application."
+    },
+    {
+        "id": "image13",
+        "title": "School Manager",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/school-mngr",
+        "link": "https://school-mngr-deploy.vercel.app/",
+        "description": "Angular App for Managing School related Actions."
+    },
+    {
+        "id": "image14",
+        "title": "TinyLife Sentinel",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/tiny-life-sentinel",
+        "link": "https://tiny-life-sentinel.vercel.app/",
+        "description": "React Appliation for monitoring vital signs of neo-natal babies."
+    },
+    {
+        "id": "image15",
+        "title": "Trivia Application",
+        "image": "images/window.jpg",
+        "imageSmall": "images/mobile_window.jpg",
+        "linkGit" : "https://github.com/antoniaalbu/quiz-game",
+        "link": "https://antoniaalbu.github.io/quiz-game/",
+        "description": "Trivia Game in JavaScript."
     }
 ]
