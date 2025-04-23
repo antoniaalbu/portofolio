@@ -87,7 +87,7 @@
         "title": "Expense Tracker",
         "image": "images/window.jpg",
         "imageSmall": "images/mobile_window.jpg",
-        "linkGit" : "https://github.com/andricolae/expense-tracker",
+        "linkGit": "https://github.com/andricolae/expense-tracker",
         "link": "https://expense-tracker-ntt.vercel.app/",
         "description": "Angular App that lets you track your expenses."
     },

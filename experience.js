@@ -34,3 +34,19 @@ window.addEventListener('load', function() {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('skills-experience');
+    if (target) {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 900) {
+        const target = document.getElementById('skills-experience');
+        if (target) {
+            target.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
+    }
+});

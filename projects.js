@@ -1,86 +1,241 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Document loaded.");
+const projects = [
+    
+        {
+          "id": "image1",
+          "title": "Coming Soon",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+         "folderIcon": "images/retro_foldrr.png",
+          "link": "https://antoniaalbu.github.io/comingSoon",
+          "linkGit": "https://github.com/antoniaalbu/comingsoon",
+          "description": "This is a simple 'Coming Soon' landing page for a website, designed using only HTML and CSS. It's a clean, minimalistic page that informs visitors that the website is under construction or about to launch. The design is responsive, ensuring it looks great on both desktops and mobile devices."
+        },
+        {
+          "id": "image2",
+          "title": "SENSOR INC.",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/antoniaalbu.github.io",
+          "link": "https://antoniaalbu.github.io/home.html",
+          "description": "This project features a simple, professional company website created using HTML and CSS. It's a basic layout for a company, providing information and a clean user interface, and showcases essential web design elements."
+        },
+        {
+          "id": "image3",
+          "title": "Grid Vs. Flex",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/sitelayout",
+          "link": "https://antoniaalbu.github.io/sitelayout/",
+          "description": "This project demonstrates the differences between two popular CSS layout techniques: CSS Grid and Flexbox. It helps showcase how these two methods differ in terms of their use and advantages in web design, with practical examples built using HTML and CSS."
+        },
+        {
+          "id": "image4",
+          "title": "Tip Calculator",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/tip-calculator",
+          "link": "https://antoniaalbu.github.io/tip-calculator",
+          "description": "A Tip Calculator built with JavaScript that allows users to quickly calculate how much to tip based on a percentage of their bill. This project showcases basic JavaScript functions, DOM manipulation, and user input handling."
+        },
+        {
+          "id": "image5",
+          "title": "Responsive Navbar",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/navbar",
+          "link": "https://antoniaalbu.github.io/navbar",
+          "description": "A **responsive multi-level navigation bar** built with HTML, CSS, and JavaScript. This project demonstrates how to build a navigation bar that adapts to different screen sizes and allows for a clean, responsive user experience."
+        },
+        {
+          "id": "image6",
+          "title": "Currency Converter",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/currency-convertor",
+          "link": "https://antoniaalbu.github.io/currency-convertor/",
+          "description": "A Currency Converter built with JavaScript that allows users to convert values between different currencies. This project showcases how to work with APIs to fetch real-time currency exchange rates and dynamically update values."
+        },
+        {
+          "id": "image7",
+          "title": "Magic Mirror",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/francescomaxim/PersonalDashboard",
+          "link": "https://francescomaxim.github.io/PersonalDashboard/LogIn/login.html",
+          "description": "A dashboard application built with JavaScript. This project provides a user-friendly interface for displaying and managing various personal data or tasks, making it a great example of how to manage dynamic content on a single page."
+        },
+        {
+          "id": "image8",
+          "title": "Recipe Finder",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/recipe-finder-angular",
+          "link": "https://recipe-finder-angular.vercel.app/",
+          "description": "An Angular Application that helps you find recipes. It pulls data from a recipe API and displays it to users. This project is a great example of how to work with Angular for building dynamic, real-time web applications."
+        },
+        {
+          "id": "image9",
+          "title": "Snowfall Animation",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+         "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/snowfall",
+          "link": "https://snowfall-deployed-git-main-antoniaalbus-projects.vercel.app/",
+          "description": "A Snowfall Animation built using Angular. This project simulates a snowfall effect, commonly used as a screensaver or background animation. It's an excellent showcase of how to implement visual effects using Angular."
+        },
+        {
+          "id": "image11",
+          "title": "Expense Tracker",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/andricolae/expense-tracker",
+          "link": "https://expense-tracker-ntt.vercel.app/",
+          "description": "An Angular App that allows users to track and manage their daily expenses. This project demonstrates how to build applications that deal with dynamic data and provide functionality like adding, editing, and deleting expenses."
+        },
+        {
+          "id": "image12",
+          "title": "Angular Template",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/angular-app",
+          "link": "https://final-angular-app.vercel.app/home",
+          "description": "A template for an Angular application that can be used as a foundation for future projects. It includes a clean structure with essential components, routes, and services that are ready for customization."
+        },
+        {
+          "id": "image13",
+          "title": "School Manager",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/school-mngr",
+          "link": "https://school-mngr-deploy.vercel.app/",
+          "description": "An Angular App designed for managing school-related tasks and data. It allows users to organize information like student records, grades, and other school management details. This project demonstrates Angular's power for building organizational apps."
+        },
+        {
+          "id": "image14",
+          "title": "TinyLife Sentinel",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/tiny-life-sentinel",
+          "link": "https://tiny-life-sentinel.vercel.app/",
+          "description": "A React Application for monitoring vital signs of neo-natal babies. This project demonstrates how to use React to build complex, data-driven applications for medical purposes, such as tracking and analyzing vital health indicators."
+        },
+        {
+          "id": "image15",
+          "title": "Trivia Application",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/quiz-game",
+          "link": "https://antoniaalbu.github.io/quiz-game/",
+          "description": "A Trivia Game built with **JavaScript**. This fun application tests users' knowledge on various topics. It features multiple choice questions, a timer, and keeps track of the user's score, showcasing the power of JavaScript for building interactive games."
+        }
+      
+      
+]
 
-    fetch('myprojects.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log("Projects fetched:", data);
 
-            const projectsContainer = document.getElementById('projectsContainer');
-            data.forEach(project => {
-                const folder = document.createElement('div');
-                folder.classList.add('folder');
 
-                const link = document.createElement('a');
-                link.href = `#${project.id}`; 
-                link.innerHTML = `<img src="images/folder.png" alt="${project.title}"><p>${project.title}</p>`;
-                folder.appendChild(link);
-                projectsContainer.appendChild(folder);
-                
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    console.log(`📂 Folder clicked: ${project.title} (ID: ${project.id})`);
-                    showPopup(project);
-                });
-            });
-        })
-        .catch(error => console.error('❌ Error fetching projects:', error));
-});
+function createProjectFolders() {
+    const container = document.getElementById("projectsContainer");
 
-function showPopup(project) {
-    console.log("🔍 Showing popup for:", project);
+    projects.forEach(project => {
+        const folderDiv = document.createElement("div");
+        folderDiv.classList.add("folder");
 
-    const overlay = document.getElementById(project.id); 
-    if (!overlay) {
-        console.error(`❗ Overlay with ID "${project.id}" not found.`);
-        return;
-    }
+        // Create the folder image and title
+        const folderImage = document.createElement("img");
+        folderImage.src = project.folderIcon; // The icon for the folder
+        folderImage.alt = `${project.title} Folder`;
 
-    const index = project.id.replace("image", "");
-    const imageElement = document.getElementById(`popupImage${index}`);
-    const linkElement = document.getElementById(`popupLink${index}`);
-    const linkGitElement = document.getElementById(`popupLinkGit${index}`);
-    const textElement = document.getElementById(`popupText${index}`);
+        const folderTitle = document.createElement("p");
+        folderTitle.textContent = project.title;
 
-    if (imageElement && linkElement && linkGitElement && textElement) {
-        setPopupImage(project, imageElement); 
-        linkElement.href = project.link; 
-        linkGitElement.href = project.linkGit;
-        linkElement.textContent = "View Website";
-        linkGitElement.textContent = "Link Git";
-        textElement.innerHTML = project.description;
+        // Create the folder div, containing the image and title
+        folderDiv.appendChild(folderImage);
+        folderDiv.appendChild(folderTitle);
 
-        overlay.style.opacity = '1'; 
-        overlay.style.visibility = 'visible'; 
-        console.log(`✅ Popup shown for project: ${project.title}`);
-    } else {
-        console.error("❌ Missing popup elements for project:", project);
-    }
+        // Add click event listener to open the popup
+        folderDiv.addEventListener("click", () => {
+            showProjectPopup(project);
+        });
+
+        // Append the folder to the container
+        container.appendChild(folderDiv);
+    });
 }
 
-function setPopupImage(project, imageElement) {
-    const updateImage = () => {
-        if (window.innerWidth < 768) {
-            imageElement.src = project.imageSmall;
-            console.log(`📱 Loaded small image: ${project.imageSmall}`);
-        } else {
-            imageElement.src = project.image;
-            console.log(`🖥️ Loaded large image: ${project.image}`);
-        }
+// Function to display project details in the popup with added title (head)
+function showProjectPopup(project) {
+    // Set the project title in the head section of the popup
+    document.getElementById("popupTitle").textContent = project.title;
+    
+    // Set the description of the project in the popup
+    document.getElementById("popupText").textContent = project.description;
+    
+    // Set up the actions for the buttons (Live Project and GitHub)
+    document.getElementById("popupLink").onclick = function () {
+        window.open(project.link, '_blank');
+    };
+    document.getElementById("popupLinkGit").onclick = function () {
+        window.open(project.linkGit, '_blank');
     };
 
-    updateImage(); // Initial load
-    window.addEventListener('resize', updateImage); // Update on resize
+    // Show the popup
+    const popup = document.getElementById("popupOverlay");
+    popup.style.visibility = "visible";
+    popup.style.opacity = "1";
 }
 
-document.querySelectorAll('.close').forEach(closeButton => {
-    closeButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        const overlay = event.target.closest('.overlay');
-        if (overlay) {
-            overlay.style.opacity = '0'; 
-            overlay.style.visibility = 'hidden'; 
-            console.log(`❎ Closed popup: ${overlay.id}`);
-        }
-    });
+// Close the popup when the close button is clicked
+document.getElementById("closePopup").addEventListener("click", () => {
+    const popup = document.getElementById("popupOverlay");
+    popup.style.visibility = "hidden";
+    popup.style.opacity = "0";
 });
+
+// Function to create folders based on the project details
+function createProjectFolders() {
+    const container = document.getElementById("projectsContainer");
+
+    // Loop through each project to create a folder
+    projects.forEach(project => {
+        const folderDiv = document.createElement("div");
+        folderDiv.classList.add("folder");
+
+        // Create the folder image and title
+        const folderImage = document.createElement("img");
+        folderImage.src = project.folderIcon; // The icon for the folder
+        folderImage.alt = `${project.title} Folder`;
+
+        const folderTitle = document.createElement("p");
+        folderTitle.textContent = project.title;
+
+        // Create the folder div, containing the image and title
+        folderDiv.appendChild(folderImage);
+        folderDiv.appendChild(folderTitle);
+
+        // Add click event listener to open the popup
+        folderDiv.addEventListener("click", () => {
+            showProjectPopup(project);
+        });
+
+        // Append the folder to the container
+        container.appendChild(folderDiv);
+    });
+}
+
+// Initialize the project folders when the page loads
+window.onload = createProjectFolders;
+
+

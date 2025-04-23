@@ -12,9 +12,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 300); 
 });
 
-// JavaScript to toggle the display of the image and content
+
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
-        card.classList.toggle('open'); // Toggle the open class to show content and hide the image
+        card.classList.toggle('open'); 
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const card = document.getElementById("aboutCard");
+  
+    card.addEventListener("click", () => {
+      card.classList.toggle("open");
+    });
+  });
+  
+  
