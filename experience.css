@@ -184,6 +184,8 @@ p {
     position: relative;
 }
 
+
+
 .small-box {
     flex: 1 1 calc(25% - 30px); 
     border: 5px solid #000000;
@@ -272,7 +274,7 @@ p {
 .small-box.expanded h2 {
     align-self: center;
     margin-bottom: 12px;
-    font-size: 28px;
+    font-size: 15px;
     transform: rotate(0);
     position: sticky;
     top: 0;
@@ -285,11 +287,10 @@ p {
 }
 
 .small-box.expanded .bullet-list {
-    max-height: none; 
-    padding-top: 10px;
-    margin-top: 10px;
+    max-height: 150px; 
     opacity: 1;
     padding-bottom: 15px; 
+    overflow-y: auto;
 }
 
 @keyframes scroll {

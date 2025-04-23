@@ -18,7 +18,7 @@ body, html {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    width: 300px;
+    width: 500px;
     background-color: #ffffff;
     border: 3px solid #000000;
     z-index: 2;
@@ -93,7 +93,6 @@ body, html {
   .sidebar-menu li {
     margin: 15px 0;
     position: relative;
-    transform: rotate(-1deg);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
@@ -108,7 +107,7 @@ body, html {
   }
   
   .sidebar-menu li:hover {
-    transform: translate(-5px, -5px) rotate(-1deg);
+    transform: translate(-5px, -5px);
     box-shadow: 8px 8px 0 #000000;
   }
   
@@ -169,8 +168,10 @@ body, html {
   .sidebar-window.minimized .window-title {
     border-bottom: none;
   }
+
+
   
-  /* Responsive adjustments */
+
   @media (max-width: 768px) {
     .sidebar-window {
       width: 250px;
@@ -187,7 +188,6 @@ body, html {
     }
   }
   
-  /* Animation for window appearance */
   @keyframes windowSlideIn {
     from {
       right: -350px;
@@ -378,12 +378,10 @@ body, html {
     position: relative;        /* Keep it as the positioning context */
 }
 
-/* Project Title */
 #popupTitleText {
     font-size: 18px;
 }
 
-/* Close Button inside the head */
 .close-button {
     background-color: #ff5454;
     color: white;
@@ -409,7 +407,7 @@ body, html {
 
   .button-container {
     display: flex;
-    gap: 10px; /* Space between the buttons */
+    gap: 10px; 
     justify-content: center;
     width: 100%;
 }
