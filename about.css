@@ -236,7 +236,6 @@ html, body {
   display: inline-block;
 }
 
-/* Blue underline */
 .card__title::after {
   content: "";
   position: absolute;
