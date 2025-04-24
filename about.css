@@ -31,7 +31,9 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   padding: 40px;
-  width: 900px;
+  margin-top: 40px;
+  width: 80%;
+  height: 400px;
   background-color: #ffffff;
   border: 8px solid #000000;
   border-radius: 3px;
@@ -143,7 +145,7 @@ html, body {
 
 .card {
   position: relative;
-  width: 400px;
+  width: 700px;
   height: 300px;
   margin-left: 100px;
   background-color: #ffffff;
@@ -298,7 +300,7 @@ html, body {
   border: 5px solid #000;
   opacity: 0.7;
   top: 10%;
-  right: 10%;
+  right: 2%;
   z-index: 0;
 }
 
@@ -311,7 +313,7 @@ html, body {
   background-color: #ff6ec7;
   border: 5px solid #000;
   bottom: 10%;
-  left: 10%;
+  left: 5%;
   z-index: 0;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
 }
