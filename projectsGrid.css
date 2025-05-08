@@ -322,154 +322,165 @@ body, html {
   
 
 
+/* ===== Responsive Styles for Devices <= 768px ===== */
 @media screen and (max-width: 768px) {
-    .popup-image {
-        content: url('images/mobile_window.jpg'); 
-        width: 90%; 
-    }
+  .sidebar-window {
+    width: 250px;
+    right: 20px;
+  }
 
-    .popup-text {
-        position: absolute;
-        top: 45%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        max-width: 60%;  
-        transition: transform 0.5s ease;
-    }
-    
-    .popup-link {
-        position: absolute;
-        top: 60%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: rgb(237, 81, 188);
-        font-size: 18px;
-        padding: 20px;
-        max-width: 40%; 
-        text-align: center; 
-        transition: color 0.3s ease-in-out;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    
-    .popup-link2 {
-        position: absolute;
-        top: 65%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: rgb(237, 81, 188);
-        font-size: 18px;
-        padding: 20px;
-        max-width: 40%; 
-        text-align: center; 
-        transition: color 0.3s ease-in-out;
-        cursor: pointer;
-        text-decoration: none;
-    }
+  .sidebar-menu li a {
+    font-size: 16px;
+    padding: 10px 8px;
+  }
 
-    .close {
-        position: absolute;
-        top: 11%;
-        left: 16%;
-        color: white;
-        font-size: 24px;
-        text-decoration: none;
-        background: rgb(237, 81, 188); 
-        padding: 10px; 
-        border-radius: 50%; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        width: 23px; 
-        height: 23px; 
-        text-align: center; 
-        transition: transform 0.5s ease;
-    }
+  .window-title h3 {
+    font-size: 18px;
+  }
+
+  .popup-image {
+    content: url('images/mobile_window.jpg');
+    width: 90%;
+  }
+
+  .popup-text {
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    max-width: 60%;
+    transition: transform 0.5s ease;
+  }
+
+  .popup-link,
+  .popup-link2 {
+    top: 60%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    max-width: 40%;
+  }
+
+  .close {
+    top: 11%;
+    left: 16%;
+    font-size: 24px;
+    padding: 10px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .toolbar-menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .toolbar-menu li {
+    padding: 5px;
+  }
+
+  .toolbar-menu a {
+    font-size: 14px;
+  }
+
+  .folder-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .folder p {
+    font-size: 12px;
+    max-width: 60px;
+  }
+
+  .folder img {
+    width: 60px;
+  }
+
+  .centered-text {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
 
+/* ===== Responsive Styles for Devices <= 478px ===== */
 @media screen and (max-width: 478px) {
-    .popup-image {
-        content: url('images/mobile_window.jpg'); 
-        width: 90%; 
-        height: auto;
-        transform: scale(0.8); 
-        transition: transform 0.5s ease; 
-        display: block;   
-    }
 
-    .folder-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 50px; 
-        padding: 20px;
-        position: absolute;
-        top: 5%; 
-        z-index: 1; 
-    }
 
-    .popup-text {
-        position: absolute;
-        top: 45%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        max-width: 60%;  
-        transition: transform 0.5s ease;
-    }
-    
-    .popup-link {
-        position: absolute;
-        top: 60%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: rgb(237, 81, 188);
-        font-size: 18px;
-        padding: 20px;
-        max-width: 40%; 
-        text-align: center; 
-        transition: color 0.3s ease-in-out;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    
-    .popup-link2 {
-        position: absolute;
-        top: 65%; 
-        left: 47%; 
-        transform: translate(-50%, -50%); 
-        color: rgb(237, 81, 188);
-        font-size: 18px;
-        padding: 20px;
-        max-width: 40%; 
-        text-align: center; 
-        transition: color 0.3s ease-in-out;
-        cursor: pointer;
-        text-decoration: none;
-    }
+  .card {
+    width: 90%;
+    height: 90%;
+    box-shadow: 8px 8px 0 #000000;
+    translate: -4px -4px;
+  }
 
-    .close {
-        position: absolute;
-        top: 10.5%;
-        left: 16%;
-        color: white;
-        font-size: 24px;
-        text-decoration: none;
-        background: rgb(237, 81, 188); 
-        padding: 10px; 
-        border-radius: 50%; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        width: 23px; 
-        height: 23px; 
-        text-align: center; 
-        transition: transform 0.5s ease;
-    }
+  .head {
+    font-size: 14px;
+    height: auto;
+    padding: 8px 10px;
+  }
+
+  #popupTitleText {
+    font-size: 16px;
+  }
+
+  .close-button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+
+  .folder-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 20px;
+    top: 5%;
+  }
+
+  .popup-text {
+    top: 45%;
+    left: 47%;
+    font-size: 20px;
+    padding: 20px;
+    max-width: 60%;
+    overflow-y: auto;
+  }
+
+  .popup-link,
+  .popup-link2 {
+    top: 60%;
+    left: 47%;
+    font-size: 18px;
+    max-width: 40%;
+  }
+
+  .close {
+    top: 10.5%;
+    left: 16%;
+    font-size: 24px;
+    padding: 10px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .centered-text {
+    font-size: 20px;
+    padding: 8px;
+  }
 }
 
 
