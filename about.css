@@ -23,6 +23,8 @@ html, body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding: 20px; /* Add padding for small screens */
 }
 
 .content-container {
@@ -33,7 +35,8 @@ html, body {
   padding: 40px;
   margin-top: 40px;
   width: 80%;
-  height: 400px;
+  height: auto; /* Change from fixed height */
+  min-height: 400px; /* Use min-height instead */
   background-color: #ffffff;
   border: 8px solid #000000;
   border-radius: 3px;
@@ -43,6 +46,7 @@ html, body {
   transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1), opacity 0.5s ease;
   z-index: 2;
   position: relative;
+  max-width: 1200px; /* Maximum width */
 }
 
 /* Pink sticker-like element */
@@ -114,7 +118,6 @@ html, body {
   }
 }
 
-
 .round-image {
   width: 300px;
   height: 300px;
@@ -123,7 +126,6 @@ html, body {
   transform: rotate(-3deg);
   position: relative;
   z-index: 1;
-  transform: rotate(-3deg);
   transition: transform 0.4s ease;
 }
 
@@ -160,8 +162,6 @@ html, body {
   box-shadow: 12px 12px 0 #00b4ff;
 }
 
-
-
 .card svg {
   width: 68px;
   fill: #000;
@@ -189,7 +189,6 @@ html, body {
   transform-origin: bottom;
   transition: all 0.5s cubic-bezier(0.7, 0, 0.2, 1);
 }
-
 
 .card__content-scroll {
   max-height: 100%;
@@ -219,8 +218,6 @@ html, body {
   background-color: #ffffff;
   cursor: pointer;
 }
-
-
 
 .card:hover .card__content {
   transform: rotateX(0deg);
@@ -318,32 +315,104 @@ html, body {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
 }
 
-/* Responsive styles */
+/* Added a div for geometric element */
+.content-container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff6ec7;
+  border: 5px solid #000;
+  left: -25px;
+  top: 50%;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+/* Custom cursor */
+html {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ff6ec7' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E"), auto;
+}
+
+/* Enhanced Responsive styles */
+/* Extra large screens */
+@media (max-width: 1200px) {
+  .content-container {
+    width: 90%;
+  }
+  
+  .card {
+    width: 600px;
+  }
+}
+
+/* Large screens */
+@media (max-width: 992px) {
+  .content-container {
+    padding: 30px;
+  }
+  
+  .text-content {
+    margin-left: 50px;
+  }
+  
+  .card {
+    width: 500px;
+    margin-left: 50px;
+  }
+  
+  .round-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Medium screens (tablets) */
 @media (max-width: 768px) {
+  .background-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
   .content-container {
     flex-direction: column;
     align-items: center;
     width: 90%;
     padding: 25px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     box-shadow: 10px 10px 0 #000000;
+    height: auto;
   }
 
   .text-content {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 30px;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .text-content h1 {
+    font-size: 36px;
+  }
+  
+  .text-content p {
     text-align: left;
+    font-size: 16px;
   }
 
   .round-image {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 200px;
     height: 200px;
     border: 6px solid #000;
   }
 
   .card {
-    width: 300px;
+    width: 100%;
+    max-width: 450px;
     height: 200px;
     margin-right: 0;
     margin-left: 0;
@@ -374,23 +443,153 @@ html, body {
     right: -15px;
     bottom: -15px;
   }
+  
+  /* Make decorative elements smaller on mobile */
+  .background-section::before {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #000;
+  }
+  
+  .background-section::after {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #000;
+  }
+  
+  .content-container::after {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+  }
 }
 
-/* Custom cursor */
-html {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ff6ec7' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E"), auto;
+/* Small screens (mobile phones) */
+@media (max-width: 576px) {
+  .content-container {
+    padding: 20px;
+    border-width: 6px;
+    box-shadow: 8px 8px 0 #000000;
+    width: 95%;
+  }
+  
+  .text-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+    padding-left: 10px;
+    border-left-width: 3px;
+  }
+  
+  .round-image {
+    width: 180px;
+    height: 180px;
+    border-width: 5px;
+  }
+  
+  .round-image::after {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .card {
+    height: 180px;
+    border-width: 5px;
+    box-shadow: 6px 6px 0 #00b4ff;
+  }
+  
+  .card:hover {
+    box-shadow: 9px 9px 0 #00b4ff;
+  }
+  
+  .card__content {
+    border-width: 5px;
+    padding: 15px;
+  }
+  
+  .card__title {
+    font-size: 22px;
+  }
+  
+  .card__description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Further reduce size of decorative elements */
+  .content-container::before {
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-width: 2px;
+    box-shadow: 3px 3px 0 #000;
+  }
+  
+  .background-section::before {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .background-section::after {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .content-container::after {
+    width: 30px;
+    height: 30px;
+    left: -15px;
+  }
 }
 
-/* Add a div for geometric element in your HTML */
-.content-container::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #ff6ec7;
-  border: 5px solid #000;
-  left: -25px;
-  top: 50%;
-  transform: rotate(45deg);
-  z-index: 3;
+/* Very small screens */
+@media (max-width: 375px) {
+  .text-content h1 {
+    font-size: 24px;
+  }
+  
+  .round-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card {
+    height: 160px;
+  }
+  
+  .card__title {
+    font-size: 20px;
+  }
+  
+  .card__description {
+    font-size: 13px;
+  }
+  
+  /* Properly size background pattern */
+  .background-section {
+    background-size: 30px 30px;
+  }
 }
+
+/* Fix touch interactions for mobile */
+@media (hover: none) {
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card:active {
+    transform: translate(-5px, -5px);
+    box-shadow: 17px 17px 0 #00b4ff;
+  }
+  
+  .round-image:active {
+    transform: rotate(2deg) scale(1.05);
+  }
+}
+
+/* Add meta viewport tag in your HTML */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> */

@@ -139,6 +139,16 @@ const projects = [
           "linkGit": "https://github.com/antoniaalbu/quiz-game",
           "link": "https://antoniaalbu.github.io/quiz-game/",
           "description": "A Trivia Game built with **JavaScript**. This fun application tests users' knowledge on various topics. It features multiple choice questions, a timer, and keeps track of the user's score, showcasing the power of JavaScript for building interactive games."
+        },
+        {
+          "id": "image16",
+          "title": "PackMate",
+          "image": "images/window.jpg",
+          "imageSmall": "images/mobile_window.jpg",
+          "folderIcon": "images/retro_foldrr.png",
+          "linkGit": "https://github.com/antoniaalbu/luggage-pwa-app",
+          "link": "https://luggage-pwa-n2muptk8t-antoniaalbus-projects.vercel.app/",
+          "description": "PackMate is a lightweight Angular PWA built with standalone components, featuring a dynamic luggage checklist with priority tagging, progress tracking, and category filtering. It uses localStorage for offline persistence, FormsModule for reactive input handling, and is optimized with responsive, mobile-first CSS. As a PWA, it supports installability and offline use."
         }
       
       

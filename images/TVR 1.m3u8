@@ -1,0 +1,5 @@
+#EXTM3U 
+#EXTVLCOPT:http-reconnect=true 
+#EXTINF:-1,TVR 2 HD
+#EXTVLCOPT:program=25208
+http://192.168.1.10:8001/1:0:19:6278:1E:601:FFFF0000:0:0:0:
