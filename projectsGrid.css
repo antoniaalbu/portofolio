@@ -55,21 +55,7 @@ body, html {
   
   
 
-  @media (max-width: 768px) {
-    .sidebar-window {
-      width: 250px;
-      right: 20px;
-    }
-    
-    .sidebar-menu li a {
-      font-size: 16px;
-      padding: 10px 8px;
-    }
-    
-    .window-title h3 {
-      font-size: 18px;
-    }
-  }
+ 
   
   @keyframes windowSlideIn {
     from {
@@ -324,6 +310,13 @@ body, html {
 
 /* ===== Responsive Styles for Devices <= 768px ===== */
 @media screen and (max-width: 768px) {
+  .folder-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 20px;
+    top: 5%;
+  }
+
   .sidebar-window {
     width: 250px;
     right: 20px;
@@ -382,11 +375,7 @@ body, html {
     font-size: 14px;
   }
 
-  .folder-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 10px;
-  }
+
 
   .folder p {
     font-size: 12px;
@@ -409,9 +398,6 @@ body, html {
 
 /* ===== Responsive Styles for Devices <= 478px ===== */
 @media screen and (max-width: 478px) {
- 
- 
-
   #popupTitleText {
     font-size: 16px;
   }
