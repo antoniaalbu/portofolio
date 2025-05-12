@@ -73,12 +73,18 @@ body, html {
   }
 .background-container {
     width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, #ff6ec7 25%, #ff6ec7 26%, transparent 27%, transparent 74%, #ff6ec7 75%, #ff6ec7 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, #ff6ec7 25%, #ff6ec7 26%, transparent 27%, transparent 74%, #ff6ec7 75%, #ff6ec7 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding: 20px; /* Add padding for small screens */
 }
 
 @keyframes zoomIn {
@@ -127,7 +133,7 @@ body, html {
 }
 
 .folder img {
-    width: 70px; 
+    width:  80px; 
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -137,10 +143,10 @@ body, html {
 }
 
 .folder p {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 14px; 
     font-weight: bolder;
-    margin-top: 10px;
+    margin-top: -10px;
     max-width: 70px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
