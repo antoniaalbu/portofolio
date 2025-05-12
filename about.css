@@ -263,7 +263,7 @@ html, body {
 .content-container.slide-in-active {
   opacity: 1;
   transform: translateX(0);
-  animation: brutalist-entrance 0.7s cubic-bezier(0.7, 0, 0.2, 1);
+ 
 }
 
 @keyframes brutalist-entrance {
