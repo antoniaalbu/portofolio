@@ -17,7 +17,7 @@ body, html {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fddbdf;
+    background-color: #ff69b4;
     border-top: 6px solid #000;
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@ body, html {
     gap: 50px; 
     padding: 20px;
     position: absolute;
-    top: 5%; 
+    top: 1%; 
     z-index: 1; 
 }
 
@@ -236,7 +236,7 @@ body, html {
     width: 500px;
     height: auto;
     translate: -6px -6px;
-    background: #ffaacc;
+    background: #00b4ff;
     border: 3px solid #000000;
     box-shadow: 12px 12px 0 #000000;
     overflow: hidden;
@@ -299,7 +299,7 @@ body, html {
     border: 3px solid #000000;
     box-shadow: 3px 3px 0 #000000;
     font-weight: 750;
-    background: #4aadde;
+    background: #ff69b4;
     transition: all 0.3s ease;
     cursor: pointer;
     margin-bottom: 20px;
@@ -344,14 +344,9 @@ body, html {
   }
 
   .popup-text {
-    position: absolute;
-    top: 45%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     padding: 20px;
-    max-width: 60%;
     transition: transform 0.5s ease;
   }
 
@@ -414,24 +409,19 @@ body, html {
 
 /* ===== Responsive Styles for Devices <= 478px ===== */
 @media screen and (max-width: 478px) {
-
-
-  .card {
-    width: 90%;
-    height: 90%;
-    box-shadow: 8px 8px 0 #000000;
-    translate: -4px -4px;
-  }
-
-  .head {
-    font-size: 14px;
-    height: auto;
-    padding: 8px 10px;
-  }
+ 
+ 
 
   #popupTitleText {
     font-size: 16px;
   }
+
+  .button-container {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    width: 100%;
+}
 
   .close-button {
     font-size: 12px;
@@ -452,12 +442,10 @@ body, html {
   }
 
   .popup-text {
-    top: 45%;
-    left: 47%;
     font-size: 20px;
     padding: 20px;
-    max-width: 60%;
     overflow-y: auto;
+    color: black;
   }
 
   .popup-link,
@@ -477,10 +465,7 @@ body, html {
     height: 23px;
   }
 
-  .centered-text {
-    font-size: 20px;
-    padding: 8px;
-  }
+  
 }
 
 
