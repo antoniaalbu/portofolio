@@ -249,3 +249,84 @@ function createProjectFolders() {
 window.onload = createProjectFolders;
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animation to toolbar when page loads
+    setTimeout(function() {
+      document.querySelector('.neobrute-toolbar').classList.add('toolbar-active');
+    }, 500);
+    
+    // Random rotation for menu items to enhance brutalist feel
+    const menuItems = document.querySelectorAll('.toolbar-menu li');
+    menuItems.forEach(item => {
+      const randomRotation = Math.random() * 3 - 1.5; // Random rotation between -1.5 and 1.5 degrees
+      item.style.transform = `rotate(${randomRotation}deg)`;
+    });
+    
+    // Highlight different menu item on each page load
+    const randomIndex = Math.floor(Math.random() * menuItems.length);
+    menuItems.forEach(item => item.classList.remove('highlight'));
+    menuItems[randomIndex].classList.add('highlight');
+  });
+
+// Additional JavaScript for toolbar interactions
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Add animation to toolbar when page loads
+  setTimeout(function() {
+    document.querySelector('.neobrute-toolbar').classList.add('toolbar-active');
+  }, 500);
+  
+  // Random rotation for menu items to enhance brutalist feel
+  const menuItems = document.querySelectorAll('.toolbar-menu li');
+  menuItems.forEach(item => {
+    const randomRotation = Math.random() * 3 - 1.5; // Random between -1.5 and 1.5 degrees
+    item.style.transform = `rotate(${randomRotation}deg)`;
+    
+    // Add hover sound effect
+    item.addEventListener('mouseenter', function() {
+      // You could add a sound effect here with Web Audio API
+      // For now we'll just add a visual indicator
+      this.style.transition = 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    });
+  });
+  
+  // Create and add the easter egg element
+  const easterEgg = document.createElement('div');
+  easterEgg.className = 'easter-egg';
+  easterEgg.innerHTML = 'You found the secret button! Neo-brutalism FTW!';
+  document.body.appendChild(easterEgg);
+  
+  // Add click event to decoration element
+  const decoElement = document.querySelector('.toolbar-deco');
+  if (decoElement) {
+    decoElement.addEventListener('click', function() {
+      easterEgg.classList.toggle('active');
+      
+      // Hide the easter egg after 3 seconds
+      setTimeout(function() {
+        easterEgg.classList.remove('active');
+      }, 3000);
+    });
+  }
+  
+  // Add active state to menu items when clicked
+  menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      // Remove active class from all items
+      menuItems.forEach(i => i.classList.remove('highlight'));
+      
+      // Add active class to clicked item
+      this.classList.add('highlight');
+      
+      // Add click effect
+      this.style.transform = 'translateY(0) rotate(0deg)';
+      this.style.boxShadow = '2px 2px 0 var(--text)';
+      
+      // Reset after animation
+      setTimeout(() => {
+        this.style.transform = '';
+        this.style.boxShadow = '';
+      }, 300);
+    });
+  });
+});

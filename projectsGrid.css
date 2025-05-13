@@ -99,38 +99,93 @@ body, html {
     z-index: 0;
 }
 
-/* Keep all your existing container styles */
+/* Enhanced Neo-Brutalist Toolbar */
+
 .neobrute-toolbar {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary);
-    border-top: 6px solid var(--text);
+    background: repeating-linear-gradient(
+        45deg,
+        var(--primary),
+        var(--primary) 10px,
+        #ff4aa0 10px,
+        #ff4aa0 20px
+    );
+    border-top: 8px solid var(--text);
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 999;
-    font-family: 'Courier New', monospace;
+    padding: 15px 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+/* Title on the left side */
+.toolbar-title {
+    position: absolute;
+    left: 20px;
+    background-color: var(--light);
+    border: 3px solid var(--text);
+    padding: 5px 15px;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0 var(--text);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--text);
+    z-index: 1;
+    letter-spacing: -0.5px;
 }
 
 .toolbar-menu {
     display: flex;
-    gap: 40px;
+    gap: 25px;
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
+    position: relative;
 }
 
+/* Enhanced menu items with offset borders */
 .toolbar-menu li {
     background: var(--light);
-    border: 2px solid var(--text);
-    padding: 5px 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid var(--text);
+    padding: 8px 15px;
+    position: relative;
+    transform: rotate(-1deg);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Offset border effect */
+.toolbar-menu li::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    border: 3px solid var(--text);
+    z-index: -1;
+    transition: all 0.2s ease;
 }
 
 .toolbar-menu li:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) rotate(1deg);
     box-shadow: 6px 6px 0 var(--text);
+}
+
+.toolbar-menu li:hover::before {
+    top: 6px;
+    left: 6px;
+}
+
+.toolbar-menu li:active {
+    transform: translateY(-2px) rotate(0deg);
+    box-shadow: 3px 3px 0 var(--text);
 }
 
 .toolbar-menu a {
@@ -139,6 +194,216 @@ body, html {
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
+    letter-spacing: -0.5px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Decorative elements */
+.toolbar-deco {
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent);
+    border: 3px solid var(--text);
+    transform: rotate(15deg);
+    box-shadow: 3px 3px 0 var(--text);
+}
+
+.toolbar-deco::after {
+    content: "!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--text);
+}
+
+/* Highlight random menu item - change the nth-child number to highlight different items */
+.toolbar-menu li:nth-child(3) {
+    background-color: var(--primary);
+    transform: rotate(2deg) translateY(-5px);
+    box-shadow: 4px 4px 0 var(--text);
+    z-index: 2;
+}
+
+.toolbar-menu li:nth-child(3)::before {
+    background-color: var(--light);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .toolbar-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 60px; /* Make room for title and deco */
+    }
+    
+    .toolbar-title {
+        font-size: 14px;
+        padding: 4px 10px;
+        left: 10px;
+    }
+    
+    .toolbar-deco {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+    
+    .toolbar-menu li {
+        padding: 6px 10px;
+    }
+    
+    .toolbar-menu a {
+        font-size: 14px;
+    }
+    
+    .neobrute-toolbar {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .toolbar-menu {
+        gap: 10px;
+        padding: 25px 40px 5px 40px;
+    }
+    
+    .toolbar-title {
+        font-size: 12px;
+        padding: 3px 8px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+    }
+    
+    .toolbar-deco {
+        display: none;
+    }
+    
+    .toolbar-menu li {
+        padding: 5px 8px;
+        margin-bottom: 10px;
+    }
+    
+    .toolbar-menu a {
+        font-size: 12px;
+    }
+    
+    .neobrute-toolbar {
+        padding: 5px 0 10px 0;
+    }
+}
+
+/* Additional CSS for toolbar animations and enhancements */
+
+/* Toolbar entrance animation */
+@keyframes toolbar-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.neobrute-toolbar {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.toolbar-active {
+  animation: toolbar-slide-up 0.5s forwards cubic-bezier(0.2, 0.9, 0.3, 1.1);
+}
+
+/* Glitch effect on toolbar title */
+@keyframes glitch {
+  0% {
+    transform: translate(0) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-2px, 1px) rotate(-1deg);
+  }
+  40% {
+    transform: translate(-1px, -1px) rotate(-3deg);
+  }
+  60% {
+    transform: translate(1px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(1px, -1px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0) rotate(-2deg);
+  }
+}
+
+.toolbar-title:hover {
+  animation: glitch 0.3s infinite;
+  color: var(--accent);
+}
+
+/* Highlight class for random menu item */
+.toolbar-menu li.highlight {
+  background-color: var(--primary);
+  transform: rotate(2deg) translateY(-5px);
+  box-shadow: 4px 4px 0 var(--text);
+  z-index: 2;
+}
+
+.toolbar-menu li.highlight::before {
+  background-color: var(--light);
+}
+
+/* Adding texture to the toolbar background */
+.neobrute-toolbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Hidden easter egg - appears when clicking the toolbar-deco element */
+.toolbar-deco {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toolbar-deco:hover {
+  transform: rotate(30deg) scale(1.1);
+}
+
+.easter-egg {
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  background-color: var(--light);
+  border: 3px solid var(--text);
+  padding: 10px;
+  box-shadow: 6px 6px 0 var(--text);
+  font-weight: bold;
+  max-width: 200px;
+  z-index: 1000;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.easter-egg.active {
+  transform: scale(1);
 }
 
 @keyframes windowSlideIn {
@@ -175,7 +440,7 @@ body, html {
 .folder-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 50px; 
+    gap: 40px; 
     padding: 20px;
     position: absolute;
     top: 1%; 
