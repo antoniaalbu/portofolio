@@ -99,7 +99,7 @@ body, html {
     z-index: 0;
 }
 
-/* Enhanced Neo-Brutalist Toolbar */
+/* Enhanced Neo-Brutalist Toolbar with Retro Buttons */
 
 .neobrute-toolbar {
     position: fixed;
@@ -123,11 +123,11 @@ body, html {
     font-family: 'Space Mono', 'Courier New', monospace;
 }
 
-/* Title on the left side */
+/* Title on the left side - more retro styling */
 .toolbar-title {
     position: absolute;
     left: 20px;
-    background-color: var(--light);
+    background-color: #f0f0f0; /* Light gray background for old UI feel */
     border: 3px solid var(--text);
     padding: 5px 15px;
     transform: rotate(-2deg);
@@ -138,6 +138,8 @@ body, html {
     color: var(--text);
     z-index: 1;
     letter-spacing: -0.5px;
+    /* Add pixel-style border */
+    image-rendering: pixelated;
 }
 
 .toolbar-menu {
@@ -149,67 +151,89 @@ body, html {
     position: relative;
 }
 
-/* Enhanced menu items with offset borders */
+/* Retro computer buttons styling */
 .toolbar-menu li {
-    background: var(--light);
+    background: #d8d8d8; /* Light gray for old computer feel */
     border: 3px solid var(--text);
+    border-radius: 4px; /* Slight rounding */
     padding: 8px 15px;
     position: relative;
-    transform: rotate(-1deg);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: none; /* Remove rotation for more structured look */
+    transition: all 0.1s ease; /* Faster for more digital feel */
+    
+    /* Inner shading for embossed look */
+    box-shadow: 
+        inset 1px 1px 0px #ffffff, 
+        inset -1px -1px 0px #888888,
+        2px 2px 0 var(--text);
 }
 
-/* Offset border effect */
+/* Remove the offset border for cleaner retro look */
 .toolbar-menu li::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent);
-    border: 3px solid var(--text);
-    z-index: -1;
-    transition: all 0.2s ease;
+    display: none;
 }
 
-.toolbar-menu li:hover {
-    transform: translateY(-8px) rotate(1deg);
-    box-shadow: 6px 6px 0 var(--text);
-}
-
-.toolbar-menu li:hover::before {
-    top: 6px;
-    left: 6px;
-}
-
+/* Pressed state - significant visual change */
 .toolbar-menu li:active {
-    transform: translateY(-2px) rotate(0deg);
-    box-shadow: 3px 3px 0 var(--text);
+    transform: translateY(2px) translateX(2px);
+    box-shadow: 
+        inset -1px -1px 0px #ffffff, 
+        inset 1px 1px 0px #888888,
+        0px 0px 0 var(--text);
+    border-color: #666666;
+}
+
+/* Hover state for old buttons */
+.toolbar-menu li:hover {
+    transform: translateY(-2px);
+    background-color: #e8e8e8;
+    box-shadow: 
+        inset 1px 1px 0px #ffffff, 
+        inset -1px -1px 0px #888888,
+        4px 4px 0 var(--text);
 }
 
 .toolbar-menu a {
     text-decoration: none;
     color: var(--text);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     display: block;
     position: relative;
     z-index: 2;
+    /* Text shadow to enhance readability and add depth */
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    /* Prevent selection for more button-like feel */
+    user-select: none;
 }
 
-/* Decorative elements */
+/* Create pixel-art border effect */
+.toolbar-menu li::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+
+
+/* Decorative elements - more pixel art style */
 .toolbar-deco {
     position: absolute;
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: var(--accent);
+    background-color: #c0c0c0; /* Classic Windows gray */
     border: 3px solid var(--text);
-    transform: rotate(15deg);
+    transform: rotate(0deg); /* No rotation for more structured look */
     box-shadow: 3px 3px 0 var(--text);
+    border-radius: 4px;
 }
 
 .toolbar-deco::after {
@@ -223,19 +247,7 @@ body, html {
     color: var(--text);
 }
 
-/* Highlight random menu item - change the nth-child number to highlight different items */
-.toolbar-menu li:nth-child(3) {
-    background-color: var(--primary);
-    transform: rotate(2deg) translateY(-5px);
-    box-shadow: 4px 4px 0 var(--text);
-    z-index: 2;
-}
-
-.toolbar-menu li:nth-child(3)::before {
-    background-color: var(--light);
-}
-
-/* Responsive styles */
+/* Responsive styles adapted for retro buttons */
 @media screen and (max-width: 768px) {
     .toolbar-menu {
         gap: 15px;
@@ -244,12 +256,7 @@ body, html {
         padding: 0 60px; /* Make room for title and deco */
     }
     
-    .toolbar-title {
-        font-size: 14px;
-        padding: 4px 10px;
-        left: 10px;
-    }
-    
+   
     .toolbar-deco {
         width: 30px;
         height: 30px;
@@ -272,16 +279,10 @@ body, html {
 @media screen and (max-width: 478px) {
     .toolbar-menu {
         gap: 10px;
-        padding: 25px 40px 5px 40px;
+       
     }
     
-    .toolbar-title {
-        font-size: 12px;
-        padding: 3px 8px;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%) rotate(-2deg);
-    }
+ 
     
     .toolbar-deco {
         display: none;
@@ -301,89 +302,43 @@ body, html {
     }
 }
 
-/* Additional CSS for toolbar animations and enhancements */
-
-/* Toolbar entrance animation */
-@keyframes toolbar-slide-up {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.neobrute-toolbar {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.toolbar-active {
-  animation: toolbar-slide-up 0.5s forwards cubic-bezier(0.2, 0.9, 0.3, 1.1);
-}
-
-/* Glitch effect on toolbar title */
-@keyframes glitch {
-  0% {
-    transform: translate(0) rotate(-2deg);
-  }
-  20% {
-    transform: translate(-2px, 1px) rotate(-1deg);
-  }
-  40% {
-    transform: translate(-1px, -1px) rotate(-3deg);
-  }
-  60% {
-    transform: translate(1px, 1px) rotate(-2deg);
-  }
-  80% {
-    transform: translate(1px, -1px) rotate(-1deg);
-  }
-  100% {
-    transform: translate(0) rotate(-2deg);
-  }
-}
-
-.toolbar-title:hover {
-  animation: glitch 0.3s infinite;
-  color: var(--accent);
-}
-
-/* Highlight class for random menu item */
-.toolbar-menu li.highlight {
-  background-color: var(--primary);
-  transform: rotate(2deg) translateY(-5px);
-  box-shadow: 4px 4px 0 var(--text);
-  z-index: 2;
-}
-
-.toolbar-menu li.highlight::before {
-  background-color: var(--light);
-}
-
-/* Adding texture to the toolbar background */
+/* Retro CRT screen effect for toolbar */
 .neobrute-toolbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.5;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    opacity: 0.3;
+    pointer-events: none;
 }
 
-/* Hidden easter egg - appears when clicking the toolbar-deco element */
-.toolbar-deco {
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Animation for buttons that mimics old UI flickering */
+@keyframes retro-flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.99; }
+    51% { opacity: 1; }
+    97% { opacity: 0.99; }
+    100% { opacity: 1; }
 }
 
-.toolbar-deco:hover {
-  transform: rotate(30deg) scale(1.1);
+.toolbar-menu li:hover {
+    animation: retro-flicker 0.2s 1;
+}
+
+/* Color palette switches to more retro computing colors */
+.highlight-button {
+    background-color: #ffcc00 !important; /* MS-DOS yellow */
+    color: #000080 !important; /* IBM blue text */
 }
 
 .easter-egg {
