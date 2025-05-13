@@ -90,6 +90,10 @@ p {
     border-radius: 0;
     box-shadow: 15px 15px 0 #00bfff;
     padding-top: 80px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    
 }
 
 .large-container {

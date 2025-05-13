@@ -263,7 +263,7 @@ html, body {
 .content-container.slide-in-active {
   opacity: 1;
   transform: translateX(0);
- 
+  
 }
 
 @keyframes brutalist-entrance {
